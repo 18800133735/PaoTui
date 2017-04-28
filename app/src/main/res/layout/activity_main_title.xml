@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90px"
+    android:background="@color/all_background_title">
+
+    <LinearLayout
+        android:id="@+id/ll_left_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/iv_left_view"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_5"
+            android:padding="@dimen/dp_5"
+            android:visibility="visible" />
+    </LinearLayout>
+    <!--左边的文字控件-->
+    <TextView
+        android:id="@+id/id_tv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:padding="@dimen/dp_5"
+        android:text="城市"
+        android:textSize="@dimen/sp_18"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+
+    <!--中间的文字控件-->
+    <TextView
+        android:id="@+id/tv_main_title_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:ellipsize="none"
+        android:maxEms="6"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_22"
+        android:text="帮我送"/>
+
+    <!--右边的文字控件-->
+    <TextView
+        android:id="@+id/tv_main_title_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_marginRight="@dimen/dp_10"
+        android:padding="@dimen/dp_5"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+
+
+    <!--右边的图片控件-->
+    <LinearLayout
+        android:id="@+id/right_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/iv_right_view"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_5"
+            android:padding="@dimen/dp_5"
+            android:src="@mipmap/sort3"
+             />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">PaoTui</string>
+
+    <string name="main_home">帮我送</string>
+    <string name="main_renwu">任务</string>
+    <string name="main_jiedan">接单</string>
+    <string name="task">立即下单</string>
+    <string name="fuwu">周围有5位快递人为您服务！</string>
+    <string name="quike"><![CDATA[立即取货>]]></string>
+    <string name="time">取货时间</string>
+    <string name="jinzhi">!查看《查看禁止发布的事项》</string>
+    <string name="endadress">结束地址</string>
+    <string name="startadress">开始地址</string>
+    <string name="starttask">发布任务</string>
+    <string name="help">帮我忙</string>
+    <string name="helpbuy">帮我买</string>
+    <string name="helpsend">帮我送</string>
+    <string name="ok">确定</string>
+    <string name="quxiao">取消</string>
+</resources>

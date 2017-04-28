@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.homepage.NewsActivity">
+
+    <!--加载头部-->
+    <include android:id="@+id/in_main_title"
+        layout="@layout/activity_main_title"/>
+
+    <LinearLayout
+        android:layout_marginTop="20px"
+        android:layout_below="@+id/in_main_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/news_et_username"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:hint="用户昵称"/>
+
+        <EditText
+            android:id="@+id/news_et_sex"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:hint="用户性别"/>
+        <EditText
+            android:id="@+id/news_et_adress"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:hint="用户所在区域"/>
+
+
+        <Button
+            android:id="@+id/news_bt_tijiao"
+            android:layout_marginTop="45px"
+            android:layout_marginLeft="25px"
+            android:layout_below="@+id/linear_register2"
+            android:layout_width="700px"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/u26"
+            android:textSize="23px"
+            android:textColor="#ffffff"
+            android:text="提交"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".home.jiedan.TrueNameActivity">
+
+    <!--加载头部-->
+    <include android:id="@+id/in_main_title"
+        layout="@layout/activity_main_title"/>
+
+    <RelativeLayout
+        android:layout_width="770px"
+        android:layout_height="420px">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/shiming"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="220px">
+
+        <ImageView
+            android:layout_marginLeft="20px"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:src="@mipmap/person"/>
+
+        <EditText
+            android:id="@+id/true_et_name"
+            android:layout_marginLeft="150px"
+            android:layout_width="match_parent"
+            android:background="#ffffff"
+            android:layout_height="110px"
+            android:hint="寄件人真实姓名"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="150px"
+            android:layout_marginTop="110px"
+            android:background="#c2c2c2"
+            android:layout_height="2px">
+        </RelativeLayout>
+        <ImageView
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="110px"
+            android:layout_width="90px"
+            android:layout_height="90px"
+            android:src="@mipmap/idcard"/>
+        <EditText
+            android:id="@+id/true_et_idcard"
+            android:layout_marginTop="112px"
+            android:layout_marginLeft="150px"
+            android:layout_width="match_parent"
+            android:background="#ffffff"
+            android:layout_height="110px"
+            android:hint="寄件人真实姓名"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/true_bt_ok"
+        android:layout_marginTop="10px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="@mipmap/u26"
+        android:text="确定"
+        />
+</LinearLayout>

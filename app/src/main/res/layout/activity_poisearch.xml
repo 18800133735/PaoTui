@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <!--加载头部-->
+    <include android:id="@+id/in_main_title"
+        layout="@layout/activity_main_title"/>
+    <fragment
+        android:id="@+id/map"
+        android:layout_below="@id/in_main_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.baidu.mapapi.map.SupportMapFragment" />
+
+    <RelativeLayout
+        android:layout_below="@id/in_main_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/city"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="北京" />
+        <LinearLayout
+            android:id="@+id/poi_linear1"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:orientation="horizontal" >
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="在" >-->
+            <!--</TextView>-->
+
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="市内找" >-->
+            <!--</TextView>-->
+
+            <AutoCompleteTextView
+                android:id="@+id/searchkey"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:background="@mipmap/u12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.88"
+                android:hint="请输入搜索地址"
+                />
+
+            <Button
+                android:id="@+id/searchNearby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="searchNearbyProcess"
+                android:layout_marginRight="@dimen/dp_8"
+                android:padding="10dip"
+                android:text="周边搜索" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/poi_linear2"
+            android:visibility="invisible"
+            android:layout_marginTop="90px"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:background="@mipmap/u12"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/poi_ed_adress"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="街道牌号/住宅小区/大厦名称"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/poi_linear3"
+            android:visibility="invisible"
+            android:layout_marginTop="190px"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:background="@mipmap/u12"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/poi_ed_adress2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="详细地址/楼号/门牌号"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="90px"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:onClick="OK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确定"/>
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="50dip"-->
+        <!--android:orientation="horizontal" >-->
+
+        <!--<Button-->
+            <!--android:id="@+id/search"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="12"-->
+            <!--android:onClick="searchButtonProcess"-->
+            <!--android:padding="10dip"-->
+            <!--android:text="城市内搜索" />-->
+        <!--&lt;!&ndash;<Button&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/searchNearby"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_weight="12"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:onClick="searchNearbyProcess"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:padding="10dip"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="周边搜索" />&ndash;&gt;-->
+
+        <!--<Button-->
+                <!--android:id="@+id/searchBound"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="12"-->
+                <!--android:onClick="searchBoundProcess"-->
+                <!--android:padding="10dip"-->
+                <!--android:text="区域搜索" />-->
+    <!--</LinearLayout>-->
+
+
+
+</RelativeLayout>

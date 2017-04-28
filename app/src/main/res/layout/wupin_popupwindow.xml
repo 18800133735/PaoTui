@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="500px"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:background="#cccccc"
+        android:layout_width="match_parent"
+        android:layout_height="100px">
+
+        <TextView
+            android:layout_marginTop="20px"
+            android:layout_marginBottom="20px"
+            android:layout_marginLeft="20px"
+            android:id="@+id/wupin_bt_quexiao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textSize="46px"
+            android:textColor="#0033ff"
+            android:text="取消"/>
+
+        <TextView
+            android:id="@+id/wupin_bt2_ok"
+            android:layout_marginTop="20px"
+            android:layout_marginBottom="20px"
+            android:layout_marginRight="20px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textSize="46px"
+            android:textColor="#0033ff"
+            android:text="确定"/>
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/wupin_gv"
+        android:layout_marginTop="30px"
+        android:numColumns="3"
+        android:focusable="@null"
+        android:layout_width="match_parent"
+        android:layout_height="400px">
+    </GridView>
+</LinearLayout>

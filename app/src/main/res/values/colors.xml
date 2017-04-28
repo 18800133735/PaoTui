@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- 所有页面头部的背景颜色 -->
+    <color name="all_background_title">#ff4e00</color>
+    <!-- 白色 -->
+    <color name="white">#ffffff</color>
+    <color name="log_registered">#f14e6d</color>
+
+    <!--主页底部颜色-->
+    <color name="main_button_select_before">#272736</color>
+    <!--主页顶部颜色-->
+    <color name="black">#000000</color>
+
+    <!-- 模块导航背景色 -->
+    <color name="color_module_navigation">#404767</color>
+</resources>

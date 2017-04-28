@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.jiedan.OrderTaskActivity">
+
+    <!--加载头部-->
+    <include android:id="@+id/in_main_title"
+        layout="@layout/activity_main_title"/>
+
+    <ImageView
+        android:layout_marginTop="150px"
+        android:layout_marginLeft="20px"
+        android:layout_width="80px"
+        android:layout_height="80px"
+        android:src="@mipmap/u24"/>
+    <EditText
+        android:id="@+id/order_et_sendname"
+        android:background="#ffffff"
+        android:layout_marginLeft="110px"
+        android:layout_marginTop="130px"
+        android:layout_width="200px"
+        android:layout_height="100px"
+        android:hint="发货人姓名"/>
+    <ImageView
+        android:layout_marginTop="150px"
+        android:layout_marginLeft="300px"
+        android:layout_width="3px"
+        android:layout_height="70px"
+        android:src="@mipmap/u55_line"/>
+
+    <EditText
+        android:id="@+id/order_et_sendphone"
+        android:background="#ffffff"
+        android:layout_marginLeft="310px"
+        android:layout_marginTop="130px"
+        android:layout_width="350px"
+        android:layout_height="100px"
+        android:hint="发货人电话"/>
+    <RelativeLayout
+        android:layout_marginTop="130px"
+        android:background="#c2c2c2"
+        android:layout_width="match_parent"
+        android:layout_height="2px">
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/order_iv_sendlixiren1"
+        android:layout_marginTop="140px"
+        android:layout_marginLeft="670px"
+        android:layout_width="80px"
+        android:layout_height="80px"
+        android:src="@mipmap/u24"/>
+
+    <ImageView
+        android:layout_marginTop="250px"
+        android:layout_marginLeft="20px"
+        android:layout_width="80px"
+        android:layout_height="80px"
+        android:src="@mipmap/u24"/>
+    <EditText
+        android:id="@+id/order_et_jieshuoname"
+        android:background="#ffffff"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="250px"
+        android:layout_width="200px"
+        android:layout_height="100px"
+        android:hint="收货人姓名"/>
+    <ImageView
+        android:layout_marginTop="250px"
+        android:layout_marginLeft="300px"
+        android:layout_width="3px"
+        android:layout_height="70px"
+        android:src="@mipmap/u55_line"/>
+
+    <EditText
+        android:id="@+id/order_et_jieshouphone"
+        android:background="#ffffff"
+        android:layout_marginLeft="310px"
+        android:layout_marginTop="250px"
+        android:layout_width="350px"
+        android:layout_height="100px"
+        android:hint="收货人电话"/>
+    <ImageView
+        android:id="@+id/order_iv_sendlixiren2"
+        android:layout_marginTop="250px"
+        android:layout_marginLeft="670px"
+        android:layout_width="80px"
+        android:layout_height="80px"
+        android:src="@mipmap/u24"/>
+
+    <RelativeLayout
+        android:layout_marginTop="340px"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="#F2F2F2">
+
+        <TextView
+            android:id="@+id/order_tv_truename"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="450px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="35px"
+            android:textColor="#000000"
+            android:text="发货人实名认证 >"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/order_relative_sort"
+        android:layout_marginTop="460px"
+        android:layout_width="match_parent"
+        android:layout_height="100px">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   物品品类"
+            android:textColor="#000000"
+            android:textSize="40px"/>
+
+        <TextView
+            android:layout_marginLeft="530px"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="物品品类 > "
+            android:textColor="#929292"
+            android:textSize="40px"/>
+
+    </RelativeLayout>
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_below="@+id/order_relative_sort"
+        android:layout_height="2px"
+        android:background="#929292"
+        />
+
+    <TextView
+        android:layout_marginTop="600px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40px"
+        android:textColor="#000000"
+        android:text="   备注说明"/>
+
+    <RelativeLayout
+        android:layout_marginLeft="200px"
+        android:layout_marginTop="590px"
+        android:layout_width="450px"
+        android:layout_height="190px">
+        <EditText
+            android:id="@+id/order_et_beizhu"
+            android:background="#ffffff"
+            android:layout_width="430px"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/order_iv_yuyin"
+        android:layout_marginTop="590px"
+        android:layout_marginLeft="650px"
+        android:layout_width="75px"
+        android:layout_height="80px"
+        android:src="@mipmap/yuyin"/>
+
+    <RelativeLayout
+
+        android:layout_marginTop="780px"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="#F2F2F2">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/order_relative_peisong"
+        android:layout_marginTop="880px"
+        android:layout_width="match_parent"
+        android:layout_height="100px">
+
+        <TextView
+            android:layout_marginLeft="30px"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="配送费"
+            android:textSize="40px"/>
+        <TextView
+            android:id="@+id/order_tv_money"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="590px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11"
+            android:textSize="40px"/>
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="650px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元 >"
+            android:textSize="40px"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/order_relative_peisong"
+        android:layout_width="match_parent"
+        android:background="#F2F2F2"
+        android:layout_height="match_parent">
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/order_tijiao"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:textColor="#ffffff"
+        android:background="@mipmap/u34"
+        android:text="提交"/>
+
+</RelativeLayout>
