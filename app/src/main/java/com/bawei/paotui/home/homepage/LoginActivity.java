@@ -76,10 +76,11 @@ public class LoginActivity extends BaseActivity {
         lg_bt_logqq.setOnClickListener(this);
 
         SetTitleStatue(LEFT_IMAGE_RIGHT_TEXT);
-        addImageLeftViewlistener(this,R.mipmap.left1);
-        addBtuRightViewlistener(this,"注册");
+        addImageLeftViewlistener(this, R.mipmap.left1);
+        addBtuRightViewlistener(this, "注册");
 
     }
+
     private UMAuthListener umAuthListener = new UMAuthListener() {
         @Override
         public void onComplete(SHARE_MEDIA platform, int action, Map<String, String> data) {
@@ -98,10 +99,11 @@ public class LoginActivity extends BaseActivity {
             Toast.makeText(getApplicationContext(), "Authorize cancel", Toast.LENGTH_SHORT).show();
         }
     };
+
     @Override
     public void onClick(View view) {
 
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.lg_bt_log:
                 pOk();
                 break;
@@ -132,25 +134,26 @@ public class LoginActivity extends BaseActivity {
         UMShareAPI.get(this).onActivityResult(requestCode, resultCode, data);
 
     }
-    public void pOk(){
+
+    public void pOk() {
 
         String number = lg_et_number.getText().toString().trim();
         String password = lg_et_password.getText().toString().trim();
 //      MD5加密
         DESMD5Utils desmd5Utils = new DESMD5Utils();
-        String num =desmd5Utils.encrypt(number);
+        String num = desmd5Utils.encrypt(number);
 
         String pw1 = DESMD5Utils.MD5(password, false);
-        String pw =desmd5Utils.encrypt(pw1);
+        String pw = desmd5Utils.encrypt(pw1);
 //      拼接网络请求的url
-        String url = Constant.PaoTui_SERVICE+Constant.ServiceConstant.SEND_LOGIN;
+        String url = Constant.PaoTui_SERVICE + Constant.ServiceConstant.SEND_LOGIN;
 //      map集合保存post的参数
-        Map<String,String> map = new HashMap<>();
-            map.put("phone_num",num);
-            map.put("user_password",pw);
+        Map<String, String> map = new HashMap<>();
+        map.put("phone_num", num);
+        map.put("user_password", pw);
 
 
-        PaoTuiAppliction.paoTuiOkhttpSingTop.setUrl(url,map, UserBean.class, PaoTuiOkhttpSingTop.Methods.PSOT);
+        PaoTuiAppliction.paoTuiOkhttpSingTop.setUrl(url, map, UserBean.class, PaoTuiOkhttpSingTop.Methods.PSOT);
 
         //观察者模式
         PaoTuiAppliction.paoTuiOkhttpSingTop.setCallbackM(new PaoTuiOkhttpSingTop.CallbackM() {
@@ -164,18 +167,18 @@ public class LoginActivity extends BaseActivity {
             public void onResponse(Object response) {
 //              网络请求获得返回的对象
                 UserBean userBean = (UserBean) response;
-                Log.d("YYYYY",userBean.toString());
+                Log.d("YYYYY", userBean.toString());
 
-                if (userBean.getCode().equals("07000")){
+                if (userBean.getCode().equals("07000")) {
                     setback(MainActivity.class);
 //                    保存登录的状态
-                    PreferencesUtil.put(getApplication(),"flag",true);
-                    Log.d("getUserId------login",userBean.userinfo.getUserId());
+                    PreferencesUtil.put(getApplication(), "flag", true);
+                    Log.d("getUserId------login", userBean.userinfo.getUserId());
 //                    设置推送的标识（userid）
-                    JPushInterface.setAliasAndTags(LoginActivity.this,userBean.userinfo.getUserId(),null,null);
+                    JPushInterface.setAliasAndTags(LoginActivity.this, userBean.userinfo.getUserId(), null, null);
 //                    保存token
-                    PreferencesUtil.put(getApplicationContext(),"token",userBean.getUserinfo().getToken());
-                }else if (userBean.getCode().equals("07050")){
+                    PreferencesUtil.put(getApplicationContext(), "token", userBean.getUserinfo().getToken());
+                } else if (userBean.getCode().equals("07050")) {
                     Toast.makeText(LoginActivity.this, userBean.getMessage(), Toast.LENGTH_SHORT).show();
                 }
 
